@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+    yourservice:
+        build: .
+        container_name: calliope-yourservice
+        command: gunicorn -c gunicorn.py run:app
+        ports:
+            - 5000:5000
